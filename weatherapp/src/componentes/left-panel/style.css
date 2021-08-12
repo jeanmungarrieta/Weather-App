@@ -1,0 +1,38 @@
+.left-panel_container{
+    background-color: #FFFFFF;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 2rem;
+}
+
+.search_container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.input{
+    background-color: transparent;
+    border: none;
+}
+
+.button{
+    background-color: transparent;
+    border: none;
+}
+
+.img_container{
+    padding: 1.5rem 0rem;
+    border-bottom: 0.5px solid #CECECE;
+}
+
+.main_degrees{
+    font-size: 61px;
+    font-weight: 100;
+    color: #1A1A1A;
+    padding-bottom: 1rem;
+}
+
+.predictions_container{
+    padding: 1rem 0rem;
+}
+
