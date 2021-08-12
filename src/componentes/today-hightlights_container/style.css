@@ -1,0 +1,16 @@
+.today-hightlights_container{
+
+}
+
+.bottom_title{
+    font-weight: 700;
+    color: #1A1A1A;
+    padding-top: 6px;
+    margin-bottom: 1rem;
+}
+
+.t-h_container{
+    display: flex;
+    flex-wrap: wrap;
+
+}

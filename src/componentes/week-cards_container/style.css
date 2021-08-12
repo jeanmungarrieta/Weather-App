@@ -1,0 +1,5 @@
+.week-cards_container{
+    display: flex;
+    justify-content: space-between;
+    margin: 1.5rem 0rem;
+}
