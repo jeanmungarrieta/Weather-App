@@ -7,7 +7,7 @@ import TodayHightlights from "../todayhightlights-container";
 
 function RightPanel (){
     return(
-        <div>
+        <div className="right-panel_container">
             <div>
                 <p></p>
                 <button></button>
