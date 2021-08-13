@@ -5,10 +5,10 @@ import RightPanel from "../right-panel";
 
 
 
-function WeatherPanelContainer() {
+function WeatherPanelContainer(props) {
     return (
         <div className="main-page_container">
-            <LeftPanel></LeftPanel>
+            <LeftPanel imge="https://openweathermap.org/img/wn/10d@4x.png" maindegrees="12" degrees="ºc" mainday="Monday" hour="16:00" predictionuno="Mostly Cloudy" predictiondos="Rain-30%"></LeftPanel>
             <RightPanel></RightPanel>
         </div>
     );

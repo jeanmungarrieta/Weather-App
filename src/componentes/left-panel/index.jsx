@@ -4,7 +4,7 @@ import CloudIcon from '@material-ui/icons/Cloud';
 import GrainSharpIcon from '@material-ui/icons/GrainSharp';
 
 
-function LeftPanel (){
+function LeftPanel (props){
     return(
         <div className="left-panel_container">
             <div className="search_container">
@@ -12,15 +12,19 @@ function LeftPanel (){
                 <button className="button"><LocationSearchingIcon/></button>
             </div>
             <div className="img_container">
-                <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="" />
-                <h1 className="main_degrees">12ºc</h1>
-                <p>Monday, 16:00</p>
+                <img src={props.imge} alt="" />
+                <h1 className="main_degrees">{props.maindegrees}<span>{props.degrees}</span></h1>
+                <p>{props.mainday},<span className="hour">{props.hour}</span></p>
             </div>
             <div className="predictions_container">
-                <p><CloudIcon/>Mostly Cloudy</p>
-                <p><GrainSharpIcon/>Rain - 30%</p>
+                <p className="predictions"><CloudIcon/>{props.predictionuno}</p>
+                <p className="predictions"><GrainSharpIcon/>{props.predictiondos}</p>
             </div>
         </div>
     )
 }
 export default LeftPanel;
+
+//"https://openweathermap.org/img/wn/10d@4x.png"
+// CloudIcon/
+// Mostly Cloudy
