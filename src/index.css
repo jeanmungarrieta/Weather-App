@@ -6,14 +6,15 @@
 
 
 body {
-  margin: 4rem 4rem;
+  margin: 1rem 3rem;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; */
   font-family: 'Roboto', sans-serif;
-  background-color: #D6D7DB
+  background-color: #D6D7DB;
+  height: 80vh;
 }
 
 code {
