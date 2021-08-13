@@ -3,6 +3,7 @@
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     padding: 2rem;
+    
 }
 
 .search_container{
@@ -26,7 +27,7 @@
 }
 
 .main_degrees{
-    font-size: 61px;
+    font-size: 3.8rem;
     font-weight: 100;
     color: #1A1A1A;
     padding-bottom: 1rem;

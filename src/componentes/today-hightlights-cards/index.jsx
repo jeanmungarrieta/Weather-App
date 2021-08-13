@@ -2,12 +2,14 @@ import "./style.css";
 
 
 
-function TodayHightlightsCards(){
+function TodayHightlightsCards(props){
     return(
         <div className="cards-hightlights_container">
-            <p>UV Index</p>
-            <h3 className="center_card">5</h3>
-            <p>normal</p>
+            <p className="top_card">{props.hltstitle}</p>
+            <p className="sun">{props.sunrice}</p>
+            <h3 className="center_card">{props.centercard}<span className="medida">{props.medida}</span></h3>
+            <p className="sun">{props.sunset}</p>
+            <p className="res">{props.res}</p>
         </div>
     )
 }
