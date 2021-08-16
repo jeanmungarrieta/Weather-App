@@ -9,8 +9,12 @@
     max-height: 9.37rem;
 }
 
+.img_day{
+    height: 80px;
+}
+
 .min-max-temp{
-    font-size: 0.93rem;
+    font-size: 0.97rem;
 }
 
 .min-temp{

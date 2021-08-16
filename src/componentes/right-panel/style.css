@@ -3,6 +3,7 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     padding: 2rem 2.5rem 0rem 2.5rem;
+    height: 100%;
 }
 
 .header_right{
