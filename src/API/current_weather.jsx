@@ -1,17 +1,16 @@
 import { APIKey } from "../api_key";
-import getSevenDaysWeatherForecastByCoords from "./one_call";
+import getSevenDaysForecastWeatherByCoords from "./one_call";
 
  
-function  getCoordsByCityName(city) {
+function  getSevenDaysForecastWeatherByCityName(city) {
     return( 
         fetch (
-            `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}`
+            `https://api.openweathermap.org/data/2.5/weather?q=${city}&exclude=alerts,minutely&appid=${APIKey}`
         )
         .then((res)=>res.json())
-        .then((data)=>
-            getSevenDaysWeatherForecastByCoords(data.coords)
-        )
+        .then(data => getSevenDaysForecastWeatherByCoords(data.coord.lat, data.coord.lon))
+        
     )
 }
 
-export default  getCoordsByCityName;
+export default getSevenDaysForecastWeatherByCityName;

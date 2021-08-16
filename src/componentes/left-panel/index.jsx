@@ -3,7 +3,7 @@ import LocationSearchingIcon from '@material-ui/icons/LocationSearching';
 import CloudIcon from '@material-ui/icons/Cloud';
 import GrainSharpIcon from '@material-ui/icons/GrainSharp';
 import getSevenDaysWeatherForecastByCoords from "../../API/one_call";
-import getCoordsByCityName from "../../API/current_weather";
+import getSevenDaysForecastWeatherByCityName from "../../API/current_weather";
 
 
 function LeftPanel (props){
@@ -12,12 +12,12 @@ function LeftPanel (props){
             <div className="search_container">
                 <input className="input" type="text" placeholder= "&#x1F50E;&#xFE0E; Search for places..." onClick= {(e)=>{
                     let city= e.target.value;
-                    getCoordsByCityName(city)
+                    getSevenDaysForecastWeatherByCityName(city)
                 }}/>
                 <button className="button" onClick= {(e)=>{getSevenDaysWeatherForecastByCoords()}}><LocationSearchingIcon/></button>
             </div>
             <div className="img_container">
-                <img src={props.imge} alt="" />
+                <img className="big_img" src={props.imge} alt="" />
                 <h1 className="main_degrees">{props.maindegrees}<span>{props.degrees}</span></h1>
                 <p>{props.mainday},<span className="hour">{props.hour}</span></p>
             </div>
