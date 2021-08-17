@@ -8,7 +8,7 @@ function CardDay(props) {
         <div className="card_container">
             <h5>{props.day}</h5>
             <img src={props.img} alt="" />
-            <p className="min-max-temp">{props.maxtemp}<spam className="min-temp">{props.mintemp}</spam></p>
+            <p className="min-max-temp">{props.maxtemp}<span className="min-temp">{props.mintemp}</span></p>
         </div>
 
     )
