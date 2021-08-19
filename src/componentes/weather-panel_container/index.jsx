@@ -1,25 +1,24 @@
 import "./style.css";
 import LeftPanel from "../left-panel";
 import RightPanel from "../right-panel";
-import React, { useEffect, useState } from "react";
-import getSevenDaysForecastWeatherByCityName from "../../API/current_weather";
+import { useWeather } from "../../hook/weather";
+
 
 
 
 
 function WeatherPanelContainer(props) {
-    const [weatherForecast, updateWeatherForecast] = useState({})
 
-    useEffect(() => {
-        getSevenDaysForecastWeatherByCityName('Barcelona').then(data => updateWeatherForecast(data));
-    },[]);
+    const [weather,updateByCity,updateByLocation] = useWeather();
 
     return (
         <div className="main-page_container">
-            <LeftPanel imge="https://openweathermap.org/img/wn/10d@4x.png" maindegrees="13" degrees="ºc" mainday="Monday" hour="16:00" predictionuno="Mostly Cloudy" predictiondos="Rain-30%"></LeftPanel>
+            <LeftPanel imge={`https://openweathermap.org/img/wn/${weather.current?.weather[0].icon}@4x.png`} maindegrees={weather.current?.temp} degrees="ºc" mainday="Monday" hour="16:00" predictionuno="Mostly Cloudy" predictiondos={`Rain-${weather.hourly?.[0].pop}%`} onWeatherUpdateByCity={city=>updateByCity(city)}
+            onWeatherUpdateByCurrentLocation= {()=> updateByLocation()}></LeftPanel>
             <RightPanel></RightPanel>
         </div>
     );
 }
+
 
 export default WeatherPanelContainer;
